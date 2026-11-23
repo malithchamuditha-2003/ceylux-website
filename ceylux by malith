@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ceylux Properties - Premium real estate and investment opportunities in Sri Lanka.">
+  <title>Ceylux Properties | Exceptional Real Estate Investments</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #B69A68;
+      --dark: #24231F;
+      --muted: #77746E;
+      --cream: #F8F7F4;
+      --white: #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    header {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eeeae2;
+      background: white;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 27px;
+      letter-spacing: 2px;
+    }
+
+    .logo span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .contact-btn {
+      background: var(--gold);
+      color: white;
+      padding: 12px 21px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      display: inline-block;
+      transition: .3s;
+    }
+
+    .contact-btn:hover { background: #947747; }
+
+    .hero {
+      min-height: 590px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(20,20,18,.78), rgba(20,20,18,.15)),
+        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=85') center/cover;
+      color: white;
+    }
+
+    .hero-content { max-width: 650px; padding: 90px 0; }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.13;
+      font-weight: 400;
+      margin: 23px 0;
+    }
+
+    .hero p {
+      max-width: 490px;
+      color: #eee;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .section { padding: 95px 0; }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 4vw, 43px);
+      font-weight: 400;
+      margin: 12px 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 400;
+      margin: 15px 0 20px;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .properties { background: var(--cream); }
+
+    .property-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .property-card {
+      background: white;
+      border: 1px solid #eeeae2;
+    }
+
+    .property-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .property-info { padding: 23px; }
+
+    .property-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin: 8px 0;
+    }
+
+    .property-info p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .property-link {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 17px;
+    }
+
+    .investment {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .investment h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 400;
+      margin: 15px 0;
+    }
+
+    .investment p {
+      color: #ccc8c0;
+      max-width: 620px;
+      margin: auto auto 28px;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 43px;
+      font-weight: 400;
+      margin: 15px 0;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 35px;
+      font-size: 13px;
+    }
+
+    .socials a:hover { color: var(--gold); }
+
+    footer {
+      padding: 32px 0;
+      text-align: center;
+      background: #201F1C;
+      color: #ccc;
+      font-size: 12px;
+    }
+
+    footer span { color: var(--gold); }
+
+    @media(max-width: 750px) {
+      .nav-links { display: none; }
+      .hero { min-height: 520px; }
+      .about-grid, .property-grid { grid-template-columns: 1fr; }
+      .about-grid { gap: 30px; }
+      .about-image { height: 300px; }
+      .section { padding: 65px 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">CEYLUX<span>.</span></a>
+
+    <nav class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#properties">PROPERTIES</a>
+      <a href="#investment">INVESTMENT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <a class="contact-btn"
+       href="https://wa.me/94753299895">
+       ENQUIRE NOW
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">CEYLUX PROPERTIES · SRI LANKA</div>
+
+      <h1>Exceptional Properties.<br>Extraordinary Possibilities.</h1>
+
+      <p>
+        Discover carefully selected real estate opportunities
+        and explore the potential of investing in Sri Lanka.
+      </p>
+
+      <a href="#properties" class="contact-btn">
+        EXPLORE PROPERTIES →
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+
+    <img class="about-image"
+      src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+      alt="Luxury modern property">
+
+    <div class="about-text">
+      <div class="eyebrow">WHO WE ARE</div>
+
+      <h2>Real Estate With A Vision.</h2>
+
+      <p>
+        Ceylux Properties is focused on identifying valuable
+        real estate opportunities across Sri Lanka.
+      </p>
+
+      <p>
+        We connect property owners, investors and buyers
+        through carefully selected opportunities, market
+        knowledge and a commitment to professional service.
+      </p>
+
+      <a href="#contact" class="contact-btn">DISCOVER CEYLUX</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section properties" id="properties">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">OUR PORTFOLIO</div>
+      <h2>Featured Properties</h2>
+      <p>Explore selected real estate opportunities across Sri Lanka.</p>
+    </div>
+
+    <div class="property-grid">
+
+      <article class="property-card">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=85"
+             alt="Luxury villa">
+        <div class="property-info">
+          <div class="eyebrow">LUXURY RESIDENCE</div>
+          <h3>Signature Properties</h3>
+          <p>Discover exclusive residential opportunities.</p>
+          <a href="#contact" class="property-link">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+      <article class="property-card">
+        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=85"
+             alt="Modern architecture">
+        <div class="property-info">
+          <div class="eyebrow">LAND INVESTMENT</div>
+          <h3>Prime Land</h3>
+          <p>Explore land opportunities in strategic locations.</p>
+          <a href="#contact" class="property-link">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+      <article class="property-card">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=85"
+             alt="Commercial building">
+        <div class="property-info">
+          <div class="eyebrow">COMMERCIAL</div>
+          <h3>Commercial Assets</h3>
+          <p>Discover selected commercial property opportunities.</p>
+          <a href="#contact" class="property-link">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="investment" id="investment">
+  <div class="container">
+    <div class="eyebrow">INVESTMENT PERSPECTIVE</div>
+
+    <h2>See Beyond The Property.<br>Understand Its Potential.</h2>
+
+    <p>
+      Explore property opportunities with transparent
+      three-year investment projections, estimated
+      appreciation and clearly stated assumptions.
+    </p>
+
+    <a href="#contact" class="contact-btn">DISCUSS AN INVESTMENT</a>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="eyebrow">LET'S CONNECT</div>
+
+    <h2>Your Next Opportunity Starts Here.</h2>
+
+    <p>Speak with Ceylux Properties about your next investment.</p>
+
+    <br>
+
+    <a class="contact-btn"
+       href="https://wa.me/94753299895?text=Hello%20Ceylux%20Properties%2C%20I%20would%20like%20to%20make%20an%20inquiry.">
+       WHATSAPP US
+    </a>
+
+    <div style="margin-top:25px">
+      <a href="tel:+94753299895">075 329 9895</a>
+      &nbsp; | &nbsp;
+      <a href="tel:+94728141014">072 814 1014</a>
+    </div>
+
+    <div class="socials">
+      <a href="https://www.facebook.com/share/1A8bk1m5xK/" target="_blank">FACEBOOK</a>
+      <a href="https://www.instagram.com/ceylux_properties/" target="_blank">INSTAGRAM</a>
+      <a href="https://www.tiktok.com/@ceylux.real.estat" target="_blank">TIKTOK</a>
+    </div>
+
+    <p style="margin-top:30px">
+      Email: info@ceyluxrealestate.com
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 <span>CEYLUX PROPERTIES</span>. All Rights Reserved.
+    <br><br>
+    Premium Real Estate & Investment Opportunities in Sri Lanka.
+  </div>
+</footer>
+
+</body>
+</html>
